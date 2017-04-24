@@ -24,15 +24,14 @@ $(APP1): $(OBJ1) $(OBJECTS)
 	$(CC) -o $(APP1) $(CFLAGS) $(OBJ1) $(OBJECTS) $(LIB)
 
 clean:
-	rm -f *.o $(APP1) $(APP2)
+	rm -f *.o $(APP1)
 
 #################
 # Architectures #
 #################
 
 gcc:
-	make $(APP1) CC="gcc" CFLAGS="-O2 -Wall -Werror"
-	make $(APP2) CC="gcc" CFLAGS="-O2 -Wall -Werror"	
+	make $(APP1) CC="gcc" CFLAGS="-O2 -Wall -Werror"	
 
 ###################
 # Inference Rules #

@@ -64,7 +64,7 @@ static void read_database (const char *filename) {
 			s = *ir;
 		}
 		
-		SEQ[s][c] = ik_malloc(strlen(seq));
+		SEQ[s][c] = ik_malloc(strlen(seq)+1);
 		strcpy(SEQ[s][c], seq);
 	}
 }
